@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/balls-react/static/css/main.7e7ac3e1.css",
+    "main.js": "/balls-react/static/js/main.ced21b65.js",
+    "static/js/147.87065cf8.chunk.js": "/balls-react/static/js/147.87065cf8.chunk.js",
+    "static/js/859.1a0f89e0.chunk.js": "/balls-react/static/js/859.1a0f89e0.chunk.js",
+    "static/js/216.61e123f8.chunk.js": "/balls-react/static/js/216.61e123f8.chunk.js",
+    "static/js/450.9da37d87.chunk.js": "/balls-react/static/js/450.9da37d87.chunk.js",
+    "static/js/858.9cf462f0.chunk.js": "/balls-react/static/js/858.9cf462f0.chunk.js",
+    "static/js/836.348f5597.chunk.js": "/balls-react/static/js/836.348f5597.chunk.js",
+    "static/js/937.9656214c.chunk.js": "/balls-react/static/js/937.9656214c.chunk.js",
+    "static/js/0.d7bb3291.chunk.js": "/balls-react/static/js/0.d7bb3291.chunk.js",
+    "static/js/222.189b173a.chunk.js": "/balls-react/static/js/222.189b173a.chunk.js",
+    "index.html": "/balls-react/index.html",
+    "main.7e7ac3e1.css.map": "/balls-react/static/css/main.7e7ac3e1.css.map",
+    "main.ced21b65.js.map": "/balls-react/static/js/main.ced21b65.js.map",
+    "147.87065cf8.chunk.js.map": "/balls-react/static/js/147.87065cf8.chunk.js.map",
+    "859.1a0f89e0.chunk.js.map": "/balls-react/static/js/859.1a0f89e0.chunk.js.map",
+    "216.61e123f8.chunk.js.map": "/balls-react/static/js/216.61e123f8.chunk.js.map",
+    "450.9da37d87.chunk.js.map": "/balls-react/static/js/450.9da37d87.chunk.js.map",
+    "858.9cf462f0.chunk.js.map": "/balls-react/static/js/858.9cf462f0.chunk.js.map",
+    "836.348f5597.chunk.js.map": "/balls-react/static/js/836.348f5597.chunk.js.map",
+    "937.9656214c.chunk.js.map": "/balls-react/static/js/937.9656214c.chunk.js.map",
+    "0.d7bb3291.chunk.js.map": "/balls-react/static/js/0.d7bb3291.chunk.js.map",
+    "222.189b173a.chunk.js.map": "/balls-react/static/js/222.189b173a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e7ac3e1.css",
+    "static/js/main.ced21b65.js"
+  ]
+}
