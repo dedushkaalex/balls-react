@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.sl_1{
+  box-shadow: 0px 4px 184px rgb(218 5 133 / 42%), 0px 1.84932px 85.0688px rgb(14 5 218 / 31%), 0px 1.05814px 48.6744px rgb(14 5 218 / 26%), 0px 0.642283px 29.545px rgb(14 5 218 / 23%), 0px 0.387004px 17.8022px rgb(14 5 218 / 19%), 0px 0.215509px 9.9134px rgb(14 5 218 / 16%), 0px 0.0926888px 4.26369px rgb(14 5 218 / 11%);
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth !important;
+}
+
+
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 7px;
+}
+
+.clock div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.clock div p {
+  font-size: 4rem;
+}
+.clock div small {
+  color: silver;
+  text-shadow: none;
+}
+
+@media(max-width: 460px){
+  .clock div{
+    padding: 0.5rem;
+  }
+  .clock div p{
+    font-size: 3rem;
+  }
+}
+.borderG{
+  position: relative;
+}
+.borderG::before{
+  position:absolute;
+  top:0;
+  left:5%;
+  width:90%;
+  border-top:1px solid #5D446C;
+  content:"";
+}
+.borderA{
+  position: relative;
+}
+.borderA::after{
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  content: "";
+  border-bottom:1px solid #5D446C;
+}
+.css-1io4msw-MuiTypography-root:hover{
+  animation: .2s;
+  background: linear-gradient(87.67deg, #DD62F1 -2.69%, #E731EB 53.87%, #F048FF 99.83%, #EA02FF 99.83%);
+  box-shadow: 0px 4px 184px rgb(14 5 218 / 42%), 0px 1.84932px 85.0688px rgb(14 5 218 / 31%), 0px 1.05814px 48.6744px rgb(14 5 218 / 26%), 0px 0.642283px 29.545px rgb(14 5 218 / 23%), 0px 0.387004px 17.8022px rgb(14 5 218 / 19%), 0px 0.215509px 9.9134px rgb(14 5 218 / 16%), 0px 0.0926888px 4.26369px rgb(14 5 218 / 11%) !important;
+  transition: .2s;
+}
+.stacks:hover{
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+    background-color: rgb(251, 253, 255);
+}
