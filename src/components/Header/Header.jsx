@@ -2,6 +2,7 @@ import {
   Instagram,
   Reddit,
   Twitter,
+  Telegram
 } from "@mui/icons-material";
 import {
   AppBar,
@@ -17,7 +18,7 @@ import DrawerMenu from "../Drawers/DrawerMenu";
 import DrawerMetamask from "../Drawers/DrawerMetamask";
 
 const pages = ["Home", "Nfts", "Roadmap", "Team"];
-const socNets = [Twitter, Reddit, Instagram];
+const socNets = [Twitter, Telegram, Reddit, Instagram];
 
 const Header = () => {
   const matches = useMediaQuery("(max-width:1255px)");
@@ -38,11 +39,10 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }} />
           {matches ? (
             <>          
-              <DrawerMetamask toggleDrawer={toggleDrawer}/>
               <DrawerMenu pages={pages} socNets={socNets} toggleDrawer={toggleDrawer}/>
             </>
           ) : (
-            <>
+            <div style={{display:"flex", width:'80%', paddingBottom:"20px", marginTop:"30px", borderBottom:"#2e2e2e 1px solid", justifyContent:"space-between"}}>
               <Stack direction="row" spacing={10}>
                 {pages.map((page, index) => (
                   <Typography
@@ -56,7 +56,6 @@ const Header = () => {
                   </Typography>
                 ))}
               </Stack>
-              <Box sx={{ flexGrow: 1 }} />
               <Stack direction={"row"} spacing={4}>
                 {socNets.map((Item, index) => (
                     <Item
@@ -67,9 +66,8 @@ const Header = () => {
                     />
                   ))}
               </Stack>
-              <Box sx={{ flexGrow: 1 }} />
               <DrawerMetamask toggleDrawer={toggleDrawer}/>
-            </>
+            </div>
           )}
         </Toolbar>
       </Container>

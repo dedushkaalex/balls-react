@@ -4,12 +4,12 @@ import React from "react";
 const balls = ["ball1.jpg", "ball2.jpg", "ball3.jpg"];
 
 const Welcome = () => {
-  const matches = useMediaQuery("(max-width:1000px)")
+  const matches = useMediaQuery("(max-width:1024px)")
   const phones = useMediaQuery("(max-width:500px)");
-
+  const tablets = useMediaQuery("(max-width:1300px)")
   return (
     <Container
-      sx={{ mt: "100px", pb: "118px" }}
+      sx={{ mt: matches ? '50px' : "100px", pb: phones ? '30px' : "118px" }}
       maxWidth={phones || matches ? "mt" : "xl"}
     >
       <Stack direction={matches ? "column-reverse" : 'column'}>
@@ -56,27 +56,27 @@ const Welcome = () => {
         </Stack>
         <Stack
           direction={"row"}
-          spacing={3}
+          spacing={phones ? 1 : 3}
           sx={{
             justifyContent: "center",
             alignItems: "center",
             display: "flex",
           }}
         >
-          {/* {balls.map((item, index) => {
+          {balls.map((item, index) => {
             return (
               <img
                 key={index}
                 alt="ball"
                 style={{
-                  width: "370px",
-                  borderRadius: "20px",
-                  height: "370px",
+                  width: tablets ? 'calc(90px +  (370 - 100) * ((100vw - 320px) / (1200 - 320 )))' : '370px',
+                  borderRadius: phones ? "10px" : "20px",
+                  height: tablets ? 'calc(90px +  (370 - 100) * ((100vw - 320px) / (1200 - 320 )))' : '370px',
                 }}
-                src={`./balls-react/assets/${item}`}
+                src={`/balls-react/assets/${item}`}
               />
             );
-          })} */}
+          })}
         </Stack>
       </Stack>
     </Container>

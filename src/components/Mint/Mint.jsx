@@ -156,7 +156,7 @@ const Mint = () => {
       >
         <MenuItem onClick={handleClose}>
           <Stack direction={"row"} spacing={1}>
-            <img src="/promo-react/assets/metamask.svg" alt="metamask" />
+            <img src="/balls-react/assets/metamask.svg" alt="metamask" />
             <Typography
               component={"div"}
               fontWeight={600}
@@ -254,7 +254,7 @@ const Mint = () => {
         direction={"row"}
         spacing={1}
       >
-        <img src="/promo-react/assets/metamask.svg" alt="metamask" />
+        <img src="/balls-react/assets/metamask.svg" alt="metamask" />
         <Typography
           component={"div"}
           fontWeight={600}

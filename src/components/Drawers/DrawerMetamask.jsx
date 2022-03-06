@@ -7,7 +7,7 @@ const DrawerMetamask = ({toggleDrawer}) => {
     const [metamaskDrawerOpen, setMDO] = React.useState(false);
     const metamask = (anchor) => (
         <Box
-          sx={{background:"linear-gradient(160.53deg, #0D0C11 -29.23%, #5B00A5 143.75%)", height:'100%', width: anchor === "right" || anchor === "left" ? "auto" : "100vw" }}
+          sx={{ height:'100%', width: anchor === "right" || anchor === "left" ? "auto" : 350 }}
           role="presentation"
           onClick={() => toggleDrawer(anchor, false)}
           onKeyDown={() => toggleDrawer(anchor, false)}
