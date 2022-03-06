@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/balls-react/static/css/main.a8b86212.css",
-    "main.js": "/balls-react/static/js/main.da9a64cc.js",
+    "main.js": "/balls-react/static/js/main.407a820c.js",
     "static/js/147.4fa969c9.chunk.js": "/balls-react/static/js/147.4fa969c9.chunk.js",
     "static/js/859.32e6c446.chunk.js": "/balls-react/static/js/859.32e6c446.chunk.js",
     "static/js/444.dde26e8d.chunk.js": "/balls-react/static/js/444.dde26e8d.chunk.js",
@@ -13,7 +13,7 @@
     "static/js/222.bdace60f.chunk.js": "/balls-react/static/js/222.bdace60f.chunk.js",
     "index.html": "/balls-react/index.html",
     "main.a8b86212.css.map": "/balls-react/static/css/main.a8b86212.css.map",
-    "main.da9a64cc.js.map": "/balls-react/static/js/main.da9a64cc.js.map",
+    "main.407a820c.js.map": "/balls-react/static/js/main.407a820c.js.map",
     "147.4fa969c9.chunk.js.map": "/balls-react/static/js/147.4fa969c9.chunk.js.map",
     "859.32e6c446.chunk.js.map": "/balls-react/static/js/859.32e6c446.chunk.js.map",
     "444.dde26e8d.chunk.js.map": "/balls-react/static/js/444.dde26e8d.chunk.js.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.a8b86212.css",
-    "static/js/main.da9a64cc.js"
+    "static/js/main.407a820c.js"
   ]
 }
