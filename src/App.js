@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Header from "./components/Header/Header";
 import Welcome from "./components/Welcome/Welcome";
 import { CircularProgress, useMediaQuery } from "@mui/material";
+import Join from "./components/Join/Join";
 const Honest = React.lazy(() => import("./components/Honest/Honest"));
 const Timer = React.lazy(() => import("./components/Timer/Timer"));
 const Info = React.lazy(() => import("./components/Info/Info"));
@@ -45,12 +46,13 @@ function App() {
         <Header />
         <Welcome />
       </div>
-      <Suspense fallback={<CircularProgress />}>
-        <Honest />
+      <Suspense fallback={<CircularProgress sx={{m:"0 auto"}}/>}>
         <Timer />
-        <Info />
+        <Honest />
         <Discord />
         <Contract />
+        <Join />
+        <Info />
         <Team />
         <Form />
         <Footer />

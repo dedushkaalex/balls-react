@@ -1,67 +1,100 @@
-import { Box, Container, List, ListItem, ListItemText, Typography} from '@mui/material'
-import React from 'react'
-import ListElem from './ListElem/ListElem'
+import { Box, Container, Stack, Typography, useMediaQuery } from "@mui/material";
+import React from "react";
+import ListElem from "./ListElem/ListElem";
 
 const list = [
   {
-    percentage: '10%',
-    id:1,
-    text: 'Design the NFT. Launch a community on Discord and Twitter. Launch the website.'
+    title: "Q4 21",
+    id: 1,
+    text: [
+      "$MSU Private & TBC Presale",
+      "Youth Scouts private presale",
+      "Youth Scouts public presale in own marketplace",
+      "Assets purchases / sales",
+    ],
   },
   {
-    percentage: '20%',
-    id:2,
-    text: 'Launch the website advertising. Build White List.'
+    title: "Q1-Q2 22",
+    id: 2,
+    text: [
+      "Youth Scouts gameplay: knowledge improving",
+      "Players gameplay: training + skills improving",
+      "Players & scouts aging activation",
+      "Friendly matches (beta - match comments)",
+      "Player loans",
+    ],
   },
   {
-    percentage: '30%',
-    id:3,
-    text: 'We promised to take our programmer to Hawaii'
+    title: "Q3-Q4 22",
+    id: 3,
+    text: [
+      "Multi-team: multiple teams per club",
+      "Owner & Manager roles split",
+      "2D match simulation",
+      "Career mode tournaments",
+      "Up to vote (DAO),",
+    ],
   },
   {
-    percentage: '50%',
-    id:4,
-    text: 'Get 10,000 followers and start building a White List on Discord. Are we popular yet?'
+    title: "Up to vote (DAO)",
+    id: 4,
+    text: [
+      "Stadiums",
+      "Stadiums tickets income",
+      "Renting stadiums",
+      "Betting platform",
+      "Stream matches",
+    ],
   },
-  {
-    percentage: '60%',
-    id:5,
-    text: "Preparations are complete, let's get into action."
-  },
-  {
-    percentage: '80%',
-    id:6,
-    text: 'Launch minting among WL members.'
-  },
-  {
-    percentage: '90%',
-    id:7,
-    text: 'Create a community of NFT buyers'
-  },
-  {
-    percentage: '100%',
-    id:8,
-    text: 'Testing the metaverse NFT marketplace'
-  }
-]
+];
 
 const Info = () => {
+  const matches = useMediaQuery("(max-width:900px)");
+  const phones = useMediaQuery("(max-width:716px)");
+  const tablets = useMediaQuery("(max-width:1200px)");
   return (
-    <Container sx={{display: 'flex', mt:'60px', justifyContent: 'center'}} maxWidth={'xl'}>
-        <Box sx={{ width: '100%', maxWidth: 360, bgcolor: '#2A093D', border: "1px solid rgba(255, 255, 255, 0.24)", boxShadow: '4px 4px 4px rgb(177 177 177 / 20%)' }}>
-            <List >
-                <ListItem className='borderA'  >
-                  <ListItemText>
-                  <Typography fontWeight={700} align={'center'} sx={{color: '#fff', textTransform:'uppercase',}}>Activating the Roadmap</Typography>
-                  </ListItemText>
-                </ListItem>
-              {
-                list.map(({percentage, text, id})=> <ListElem key={id} percentage={percentage} primary={text}/>)
-              }
-            </List>
+    <Container maxWidth={"lg"}>
+      <Typography
+        variant="h4"
+        component={"h2"}
+        fontFamily={"Nunito,sans-serif"}
+        fontSize={phones ? "45px" : matches ? "60px" : "80px"}
+        sx={{
+          color: "transparent",
+          fontWeight: 700,
+          m: phones
+            ? "50px 0  28px"
+            : matches
+            ? "100px 0 28px"
+            : "160px 0 48px",
+          WebkitTextStroke: "1px #FFF873",
+        }}
+        align={"left"}
+      >
+        ROADMAP
+      </Typography>
+      {tablets ? (
+        <Box
+          sx={{
+            display: "grid",
+            gap: "25px",
+            width:phones ? "100%" :"670px",
+            gridTemplateColumns: phones ? "repeat(1, 1fr)" : "repeat(2, 1fr)",
+          }}
+        >
+          {list.map(({ title, text, id }) => (
+            <ListElem  key={id + 5} title={title} primary={text} />
+          ))}
         </Box>
+      ) : (
+        <Stack direction={"row"} spacing={"20px"}>
+          {list.map(({ title, text, id }) => (
+            <ListElem key={id + 5} title={title} primary={text} />
+          ))}
+        </Stack>
+      )}
     </Container>
-  )
-}
+  );
+};
 
-export default Info
+export default Info;

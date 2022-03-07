@@ -20,23 +20,8 @@ const Mint = () => {
 
   const [userBalance, setUserBalance] = useState(null);
   const [isClicked, setIsClicked] = useState(false);
-  const detectProvider = () => {
-    let provider;
-    if (window.ethereum) {
-      provider = window.ethereum;
-    } else if (window.web3) {
-      provider = window.web3.currentProvider;
-    } else {
-      window.location.replace("https://metamask.app.link/dapp/promo-react/");
-    }
-    return provider;
-  };
-  const provider = detectProvider();
-  if (provider) {
-    if (provider !== window.ethereum) {
-      window.location.replace("https://metamask.app.link/dapp/promo-react/");
-    }
-  }
+
+
   const getAccountBalance = (account) => {
     window.ethereum
       .request({ method: "eth_getBalance", params: [account, "latest"] })
@@ -48,6 +33,23 @@ const Mint = () => {
       });
   };
   async function connect() {
+    const detectProvider = () => {
+      let provider;
+      if (window.ethereum) {
+        provider = window.ethereum;
+      } else if (window.web3) {
+        provider = window.web3.currentProvider;
+      } else {
+        window.location.replace("https://metamask.app.link/dapp/promo-react/");
+      }
+      return provider;
+    };
+    const provider = detectProvider();
+    if (provider) {
+      if (provider !== window.ethereum) {
+        window.location.replace("https://metamask.app.link/dapp/promo-react/");
+      }
+    }
     try {
       await activate(injected);
       await setMetamask(true);
