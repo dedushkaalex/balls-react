@@ -32,7 +32,7 @@ const Mint = () => {
         console.log(error.message);
       });
   };
-  async function connect() {
+  const isProvider = () =>{
     const detectProvider = () => {
       let provider;
       if (window.ethereum) {
@@ -50,6 +50,9 @@ const Mint = () => {
         window.location.replace("https://metamask.app.link/dapp/promo-react/");
       }
     }
+  }
+  async function connect() {
+    isProvider()
     try {
       await activate(injected);
       await setMetamask(true);
