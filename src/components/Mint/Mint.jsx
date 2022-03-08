@@ -52,6 +52,28 @@ const Mint = () => {
         console.log(error.message);
       });
   };
+<<<<<<< HEAD
+=======
+  const isProvider = () =>{
+    const detectProvider = () => {
+      let provider;
+      if (window.ethereum) {
+        provider = window.ethereum;
+      } else if (window.web3) {
+        provider = window.web3.currentProvider;
+      } else {
+        window.location.replace("https://metamask.app.link/dapp/promo-react/");
+      }
+      return provider;
+    };
+    const provider = detectProvider();
+    if (provider) {
+      if (provider !== window.ethereum) {
+        window.location.replace("https://metamask.app.link/dapp/promo-react/");
+      }
+    }
+  }
+>>>>>>> 52a7ed447eb4705438f715de9ba21ebf08f16848
   async function connect() {
     isProvider()
     try {
